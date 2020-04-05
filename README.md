@@ -1,13 +1,17 @@
 #1. A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 Your role is to create a database schema and ETL pipeline for this analysis.
+
 #2. Database Schema:
+
 To complete the project, create a star schema optimized for queries on song play analysis. This includes the following tables.
 
 #Fact Table
+
 songplays - records in log data associated with song plays i.e. records with page NextSong
 songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
 #Dimension Tables
+
 users - users in the app
 user_id, first_name, last_name, gender, level
 
@@ -30,6 +34,7 @@ sql_queries.py contains all your sql queries, and is imported into the last thre
 README.md provides discussion on the project.
 
 #Steps to Follow:
+
 Write CREATE statements in sql_queries.py to create each table.
 Write DROP statements in sql_queries.py to drop each table if it exists.
 Run in console: python create_tables.py
@@ -39,6 +44,7 @@ Run test.ipynb to confirm that records were successfully inserted into each tabl
 Implement etl.py, run and verify.
 
 #ETL Pipeline:
+
 Process song_data to create the songs and artists dimensional tables by inserting song record and artist record.
 song_data = [song_id, title, artist_id, year, duration]
 artist_data = [artist_id, artist_name, artist_location, artist_latitude, artist_longitude]
